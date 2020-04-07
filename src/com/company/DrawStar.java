@@ -6,11 +6,19 @@ import java.awt.geom.Path2D;
 
 public class DrawStar extends JPanel {
 
-    public int x = 250;     // координата x центра звезды
-    public int y = 250;     // координата y центра звезды
-    public int outerRadius = 40;     // внешний радиус звезды
-    public int innerRadius = 20;     // внутренний радиус звезды
-    public int numRays = 5;     // количество лучей звезды
+    private int x = 250;     // координата x центра звезды
+    private int y = 250;     // координата y центра звезды
+    private int outerRadius = 40;     // внешний радиус звезды
+    private int innerRadius = 20;     // внутренний радиус звезды
+    private int numRays = 5;     // количество лучей звезды
+
+    public DrawStar(int x, int y, int outerRadius, int innerRadius, int numRays) {     // конструктор для класса
+        this.x = x;
+        this.y = y;
+        this.outerRadius = outerRadius;
+        this.innerRadius = innerRadius;
+        this.numRays = numRays;
+    }
 
     protected void paintComponent(Graphics gr) {
         Graphics2D g = (Graphics2D) gr;
